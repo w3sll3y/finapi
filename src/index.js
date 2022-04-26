@@ -53,7 +53,7 @@ app.post('/account', (request, response) => {
     statement: []
   })
 
-  return response.status(201).json({ sucess: "Customer created!"});
+  return response.status(201).json({ success: "Customer created!"});
 
 })
 
@@ -78,7 +78,7 @@ app.post('/deposit', verifyIfExistsAccountCPF, (request, response) => {
 
   customer.statement.push(statementOpertaion);
 
-  return response.status(201).json({ sucess: "Sucess in deposit"});
+  return response.status(201).json({ success: "Success in deposit"});
 })
 
 app.post('/withdraw', verifyIfExistsAccountCPF, (request, response) => {
@@ -99,7 +99,7 @@ app.post('/withdraw', verifyIfExistsAccountCPF, (request, response) => {
 
   customer.statement.push(statementOpertaion);
 
-  return response.status(201).json({ sucess: "Sucess"});
+  return response.status(201).json({ success: "Success"});
 });
 
 app.get('/statement/date', verifyIfExistsAccountCPF,(request, response) => {
@@ -120,7 +120,7 @@ app.put('/account', verifyIfExistsAccountCPF,(request, response) => {
 
   customer.name = name;
 
-  return response.status(200).json({ sucess: "Name updated"});
+  return response.status(200).json({ success: "Name updated"});
 })
 
 app.get('/account', verifyIfExistsAccountCPF, (request, response) => {
